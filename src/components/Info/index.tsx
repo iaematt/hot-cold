@@ -4,7 +4,7 @@ import { Cold, Warm, Hot, VeryHot, Win } from "./styles";
 import { useApp } from "../../contexts/app";
 
 export const Info: React.FC = () => {
-  const { info } = useApp();
+  const { info, luckyNumber } = useApp();
 
   if (info === "cold") {
     return (
@@ -41,7 +41,10 @@ export const Info: React.FC = () => {
   if (info === "win") {
     return (
       <Win>
-        <h1>Yeah! Você ganhou!</h1>
+        <h1>
+          Yeah! Você ganhou!
+          <br /> O número correto: {luckyNumber}
+        </h1>
       </Win>
     );
   }

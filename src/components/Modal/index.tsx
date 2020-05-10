@@ -28,7 +28,7 @@ export const Modal: React.FC = () => {
             morno, quente, muito quente.
           </p>
 
-          <Button onClick={openModal}>Fechar</Button>
+          <Button onClick={openModal}>Ok, vou jogar!</Button>
         </Content>
       </Container>
     );
