@@ -46,7 +46,7 @@ export const Button = styled.button`
   background: #bae4e5;
   border: 1px solid #7bbcbd;
   border-radius: 2px;
-  padding: 6px 0;
+  padding: 8px 0;
   color: #222222;
   text-transform: uppercase;
   font-weight: 500;

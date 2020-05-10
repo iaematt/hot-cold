@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Cold = styled.div`
   text-align: center;
-  padding: 7px 0;
+  padding: 8px 0;
   background-color: #7bbcbd;
   margin-bottom: 7px;
   border-radius: 2px;
@@ -18,7 +18,7 @@ export const Cold = styled.div`
 
 export const Warm = styled.div`
   text-align: center;
-  padding: 7px 0;
+  padding: 8px 0;
   background-color: #f0d878;
   margin-bottom: 7px;
   border-radius: 2px;
@@ -34,7 +34,7 @@ export const Warm = styled.div`
 
 export const Hot = styled.div`
   text-align: center;
-  padding: 7px 0;
+  padding: 8px 0;
   background-color: #ff9900;
   margin-bottom: 7px;
   border-radius: 2px;
@@ -50,7 +50,7 @@ export const Hot = styled.div`
 
 export const VeryHot = styled.div`
   text-align: center;
-  padding: 7px 0;
+  padding: 8px 0;
   background-color: #ff404b;
   margin-bottom: 7px;
   border-radius: 2px;
@@ -66,7 +66,7 @@ export const VeryHot = styled.div`
 
 export const Win = styled.div`
   text-align: center;
-  padding: 7px 0;
+  padding: 8px 0;
   background-color: #7faf1b;
   margin-bottom: 7px;
   border-radius: 2px;
