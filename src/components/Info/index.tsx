@@ -42,8 +42,8 @@ export const Info: React.FC = () => {
     return (
       <Win>
         <h1>
-          Yeah! Você ganhou!
-          <br /> O número correto: {luckyNumber}
+          Yeah! O número correto é <br />
+          <span>{luckyNumber}</span>
         </h1>
       </Win>
     );

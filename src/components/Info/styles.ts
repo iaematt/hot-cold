@@ -75,7 +75,12 @@ export const Win = styled.div`
     font-size: 16px;
     margin: 0;
     padding: 0;
-    color: #222222;
+    color: #444444;
     text-transform: uppercase;
+
+    span {
+      font-size: 23px;
+      color: #222222;
+    }
   }
 `;
