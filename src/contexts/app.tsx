@@ -74,8 +74,6 @@ export const AppProvider: React.FC = ({ children }) => {
     setLuckyNumber(generateRadomNumber());
   }
 
-  console.log(luckyNumber);
-
   return (
     <AppContext.Provider
       value={{
