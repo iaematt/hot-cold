@@ -8,8 +8,19 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    --blue-color: #3cb2da;
+    --green-color: #3bb85d;
+    --red-color: #db4e44;
+    --yellow-color: #f7bc44;
+    --cyan-color: #3bbeb0;
+    --orange-color: #e86740;
+    --pink-color: #b377d9;
+    --purple-color: #7479d5;
+  }
+
   body {
-    background: linear-gradient(to left, #ADDDEB, #FF8080);
+    background: linear-gradient(to left, var(--blue-color), var(--red-color));
     color: #222222;
     font-size: 13px;
     font-weight: 400;

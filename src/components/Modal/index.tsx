@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Divider } from "../";
 import { Container, Content, Button } from "./styles";
 import { useApp } from "../../contexts/app";
 
@@ -16,7 +17,7 @@ export const Modal: React.FC = () => {
             <strong>
               Este é um jogo de adivinhação de números com as seguintes regras:
             </strong>
-            <br />
+            <Divider />
             <span>1.</span> A máquina escolhe um número aleatório entre 1 e 100
             e o mantém secreto.
             <br />

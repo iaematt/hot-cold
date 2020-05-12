@@ -38,6 +38,14 @@ export const Info: React.FC = () => {
     );
   }
 
+  if (info === "veryveryhot") {
+    return (
+      <VeryHot>
+        <h1>Quente quente quente</h1>
+      </VeryHot>
+    );
+  }
+
   if (info === "win") {
     return (
       <Win>

@@ -11,7 +11,6 @@ import {
   Progress,
   Title,
   Reset,
-  HowToPlay,
 } from "./components";
 
 const App: React.FC = () => {
@@ -27,7 +26,6 @@ const App: React.FC = () => {
         <Divider />
         <Progress />
         <Reset />
-        <HowToPlay />
       </Box>
 
       <Modal />

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { darken } from "polished";
 
 export const Container = styled.div`
   margin: 5px 0;
@@ -7,10 +8,10 @@ export const Container = styled.div`
 `;
 
 export const ButtonReset = styled.button`
-  background: #ff8080;
-  border: 1px solid #ff7575;
+  background: #e86841;
+  border: none;
   border-radius: 2px;
-  padding: 8px 0;
+  height: 35px;
   color: #222222;
   text-transform: uppercase;
   font-weight: 500;
@@ -18,22 +19,6 @@ export const ButtonReset = styled.button`
   transition: all 0.2s ease-in-out;
 
   :hover {
-    background: #ff7575;
-  }
-`;
-
-export const ButtonInfo = styled.button`
-  background: #bae4e5;
-  border: 1px solid #7bbcbd;
-  border-radius: 2px;
-  padding: 8px 0;
-  color: #222222;
-  text-transform: uppercase;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-
-  :hover {
-    background: #7bbcbd;
+    background: ${darken(0.1, "#e86841")};
   }
 `;

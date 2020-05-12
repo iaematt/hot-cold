@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container, ButtonReset, ButtonInfo } from "./styles";
+import { Container, ButtonReset } from "./styles";
 import { useApp } from "../../contexts/app";
 
 export const Reset: React.FC = () => {
@@ -15,14 +15,4 @@ export const Reset: React.FC = () => {
   }
 
   return <></>;
-};
-
-export const HowToPlay: React.FC = () => {
-  const { openModal } = useApp();
-
-  return (
-    <Container onClick={openModal}>
-      <ButtonInfo>Como jogar?</ButtonInfo>
-    </Container>
-  );
 };

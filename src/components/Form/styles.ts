@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { darken } from "polished";
 
 export const Container = styled.form`
   display: flex;
@@ -6,7 +7,7 @@ export const Container = styled.form`
 `;
 
 export const Label = styled.span`
-  color: #888888;
+  color: #999999;
   font-weight: 500;
 `;
 
@@ -25,10 +26,10 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  background: #cae8a2;
-  border: 1px solid #cae8a2;
+  background: #3bb85d;
+  border: none;
   border-radius: 2px;
-  padding: 8px 0;
+  height: 35px;
   color: #222222;
   text-transform: uppercase;
   font-weight: 500;
@@ -37,6 +38,6 @@ export const Button = styled.button`
   margin-top: 3px;
 
   :hover {
-    background: #cae8a2;
+    background: ${darken(0.1, "#3bb85d")};
   }
 `;

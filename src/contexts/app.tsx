@@ -8,8 +8,6 @@ interface Guess {
 
 interface AppData {
   allGuess: Guess[] | null;
-  attempts: number;
-  guess: number | undefined;
   handleSubmit(event: any): void;
   luckyNumber: number;
   modal: boolean;
@@ -22,10 +20,8 @@ interface AppData {
 const AppContext = createContext<AppData>({} as AppData);
 
 export const AppProvider: React.FC = ({ children }) => {
-  const [guess, setGuess] = useState(0);
   const [allGuess, setAllGuess] = useState<Guess[] | []>([]);
   const [luckyNumber, setLuckyNumber] = useState(0);
-  const [attempts, setAttempts] = useState(0);
   const [modal, setModal] = useState(false);
   const [info, setInfo] = useState("");
   const [block, setBlock] = useState(false);
@@ -38,16 +34,16 @@ export const AppProvider: React.FC = ({ children }) => {
     event.preventDefault();
 
     if (!block) {
-      setGuess(event.target.elements.guess.value);
       setAllGuess([{ guess: event.target.elements.guess.value }, ...allGuess]);
-      setAttempts(attempts + 1);
 
       const absMath = Math.abs(event.target.elements.guess.value - luckyNumber);
 
       if (absMath === 0) {
         setInfo("win");
         setBlock(true);
-      } else if (absMath < 4 && absMath !== 0) {
+      } else if (absMath < 2 && absMath !== 0) {
+        setInfo("veryveryhot");
+      } else if (absMath >= 2 && absMath < 4) {
         setInfo("veryhot");
       } else if (absMath >= 4 && absMath < 10) {
         setInfo("hot");
@@ -66,9 +62,7 @@ export const AppProvider: React.FC = ({ children }) => {
   }
 
   function reset() {
-    setGuess(0);
     setAllGuess([]);
-    setAttempts(0);
     setInfo("");
     setBlock(false);
     setLuckyNumber(generateRadomNumber());
@@ -78,8 +72,6 @@ export const AppProvider: React.FC = ({ children }) => {
     <AppContext.Provider
       value={{
         allGuess,
-        attempts,
-        guess,
         handleSubmit,
         luckyNumber,
         modal,

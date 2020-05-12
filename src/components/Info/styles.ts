@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Cold = styled.div`
   text-align: center;
   padding: 8px 0;
-  background-color: #7bbcbd;
+  background-color: var(--blue-color);
   margin-bottom: 7px;
   border-radius: 2px;
 
@@ -19,7 +19,7 @@ export const Cold = styled.div`
 export const Warm = styled.div`
   text-align: center;
   padding: 8px 0;
-  background-color: #f0d878;
+  background-color: var(--yellow-color);
   margin-bottom: 7px;
   border-radius: 2px;
 
@@ -35,7 +35,7 @@ export const Warm = styled.div`
 export const Hot = styled.div`
   text-align: center;
   padding: 8px 0;
-  background-color: #ff9900;
+  background-color: var(--orange-color);
   margin-bottom: 7px;
   border-radius: 2px;
 
@@ -51,7 +51,7 @@ export const Hot = styled.div`
 export const VeryHot = styled.div`
   text-align: center;
   padding: 8px 0;
-  background-color: #ff404b;
+  background-color: var(--red-color);
   margin-bottom: 7px;
   border-radius: 2px;
 
@@ -67,7 +67,7 @@ export const VeryHot = styled.div`
 export const Win = styled.div`
   text-align: center;
   padding: 8px 0;
-  background-color: #7faf1b;
+  background-color: var(--green-color);
   margin-bottom: 7px;
   border-radius: 2px;
 
@@ -75,12 +75,12 @@ export const Win = styled.div`
     font-size: 16px;
     margin: 0;
     padding: 0;
-    color: #444444;
+    color: #222222;
     text-transform: uppercase;
 
     span {
       font-size: 23px;
-      color: #222222;
+      color: #111111;
     }
   }
 `;

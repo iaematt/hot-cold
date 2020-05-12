@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { darken } from "polished";
 
 export const Container = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
@@ -16,16 +17,12 @@ export const Content = styled.div`
   width: 95%;
   max-width: 450px;
   padding: 15px;
-  background: #333333;
+  background: #222222;
   color: #eeeeee;
   border-radius: 2px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-
-  strong {
-    margin-bottom: 10px;
-  }
 
   h1 {
     font-size: 20px;
@@ -37,16 +34,16 @@ export const Content = styled.div`
   }
 
   span {
-    color: #7bbcbd;
+    color: var(--blue-color);
     font-weight: 500;
   }
 `;
 
 export const Button = styled.button`
-  background: #bae4e5;
-  border: 1px solid #7bbcbd;
+  background: var(--blue-color);
+  border: none;
   border-radius: 2px;
-  padding: 8px 0;
+  height: 35px;
   color: #222222;
   text-transform: uppercase;
   font-weight: 500;
@@ -55,6 +52,6 @@ export const Button = styled.button`
   margin-top: 10px;
 
   :hover {
-    background: #7bbcbd;
+    background: ${darken(0.1, "#3cb2da")};
   }
 `;

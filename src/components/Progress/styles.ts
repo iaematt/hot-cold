@@ -25,5 +25,6 @@ export const Guess = styled.div`
   span {
     background-color: #252525;
     padding: 2px 0;
+    margin: 0 1px;
   }
 `;

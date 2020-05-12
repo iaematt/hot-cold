@@ -4,7 +4,7 @@ import { Container, Title, Guess } from "./styles";
 import { useApp } from "../../contexts/app";
 
 export const Progress: React.FC = () => {
-  const { attempts, allGuess, block } = useApp();
+  const { allGuess, block } = useApp();
 
   return (
     <Container>
@@ -13,13 +13,15 @@ export const Progress: React.FC = () => {
           <Title>
             {block ? (
               <>
-                Você ganhou em {attempts}{" "}
-                {attempts === 1 ? "tentativa" : "tentativas"}
+                Você ganhou em {allGuess?.length}{" "}
+                {allGuess?.length === 1 ? "tentativa" : "tentativas"}
               </>
             ) : (
               <>
-                {attempts}{" "}
-                <span>{attempts === 1 ? "tentativa" : "tentativas"}</span>
+                {allGuess?.length}{" "}
+                <span>
+                  {allGuess?.length === 1 ? "tentativa" : "tentativas"}
+                </span>
               </>
             )}
           </Title>
