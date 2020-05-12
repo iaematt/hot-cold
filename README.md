@@ -22,7 +22,7 @@ $ cd hot-cold/
 # Instale as dependencias
 $ yarn
 
-# Rode a API
+# Rode a aplicação
 $ yarn start
 ```
 
