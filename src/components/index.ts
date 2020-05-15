@@ -1,6 +1,5 @@
 export { Box } from "./Box";
 export { Reset } from "./Buttons";
-export { Divider } from "./Divider";
 export { Info } from "./Info";
 export { Form } from "./Form";
 export { Modal } from "./Modal";

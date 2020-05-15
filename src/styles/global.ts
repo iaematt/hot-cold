@@ -6,6 +6,9 @@ export default createGlobalStyle`
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
   }
 
   html {
@@ -22,13 +25,13 @@ export default createGlobalStyle`
   body {
     background: linear-gradient(to left, var(--blue-color), var(--red-color));
     color: #222222;
-    font-size: 13px;
-    font-weight: 400;
+    font-size: 16px;
   }
 
-  body, input, text-area, button {
-    font-family: 'Roboto', sans-serif;
+  button {
+    width: 100%;
   }
+
 
   html, body, #root {
     height: 100%;
@@ -46,11 +49,11 @@ export default createGlobalStyle`
   h4,
   h5,
   h6 {
-      font-weight: 500;
+      font-weight: 700;
   }
 
   strong {
-    font-weight: 500;
+    font-weight: 700;
   }
 
   a {

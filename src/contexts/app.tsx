@@ -3,7 +3,7 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 import { generateRadomNumber } from "../util";
 
 interface Guess {
-  guess: number;
+  guess: number | undefined;
 }
 
 interface AppData {
@@ -15,6 +15,9 @@ interface AppData {
   reset(): void;
   info: string;
   block: boolean;
+  value: string;
+  setValue: (event: any) => void;
+  loading: boolean;
 }
 
 const AppContext = createContext<AppData>({} as AppData);
@@ -25,18 +28,22 @@ export const AppProvider: React.FC = ({ children }) => {
   const [modal, setModal] = useState(false);
   const [info, setInfo] = useState("");
   const [block, setBlock] = useState(false);
+  const [value, setValue] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLuckyNumber(generateRadomNumber());
+
+    setLoading(false);
   }, []);
 
   function handleSubmit(event: any) {
     event.preventDefault();
 
     if (!block) {
-      setAllGuess([{ guess: event.target.elements.guess.value }, ...allGuess]);
+      setAllGuess([{ guess: Number(value) }, ...allGuess]);
 
-      const absMath = Math.abs(event.target.elements.guess.value - luckyNumber);
+      const absMath = Math.abs(Number(value) - luckyNumber);
 
       if (absMath === 0) {
         setInfo("win");
@@ -53,7 +60,7 @@ export const AppProvider: React.FC = ({ children }) => {
         setInfo("cold");
       }
 
-      event.target.elements.guess.value = "";
+      setValue("");
     }
   }
 
@@ -79,6 +86,9 @@ export const AppProvider: React.FC = ({ children }) => {
         reset,
         info,
         block,
+        value,
+        setValue,
+        loading,
       }}
     >
       {children}

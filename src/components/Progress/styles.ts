@@ -14,9 +14,9 @@ export const Title = styled.h3`
 export const Guess = styled.div`
   margin: 10px 0;
   background-color: #292929;
-  padding: 7px 3px;
+  padding: 10px 3px;
   border-radius: 2px;
-  font-size: 14px;
+  font-size: 15px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(8, 1fr);

@@ -1,17 +1,9 @@
 import React from "react";
+import { Separator } from "devbsb-ui-kit";
 
 import { AppProvider } from "./contexts/app";
 import GlobalStyle from "./styles/global";
-import {
-  Box,
-  Divider,
-  Form,
-  Info,
-  Modal,
-  Progress,
-  Title,
-  Reset,
-} from "./components";
+import { Box, Form, Info, Modal, Progress, Title, Reset } from "./components";
 
 const App: React.FC = () => {
   return (
@@ -20,10 +12,10 @@ const App: React.FC = () => {
 
       <Box>
         <Title />
-        <Divider />
+        <Separator />
         <Info />
         <Form />
-        <Divider />
+        <Separator />
         <Progress />
         <Reset />
       </Box>
